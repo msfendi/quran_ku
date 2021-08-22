@@ -26,3 +26,9 @@ class AyatController extends GetxController {
     }
   }
 }
+
+// if(meal !=  null){
+//   mealDet.update((m){
+//     m.map((data) => meal);
+//   }
+// }

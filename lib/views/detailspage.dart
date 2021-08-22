@@ -5,7 +5,13 @@ import 'package:quran_ku/views/detailayat.dart';
 
 class DetailsPage extends StatefulWidget {
   final String nomor;
-  const DetailsPage({Key key, this.nomor}) : super(key: key);
+  final String surat;
+  final String arti;
+  final String tempatTurun;
+  final String ayat;
+  const DetailsPage(
+      {Key key, this.nomor, this.surat, this.arti, this.tempatTurun, this.ayat})
+      : super(key: key);
 
   @override
   _DetailsPageState createState() => _DetailsPageState();
@@ -43,7 +49,7 @@ class _DetailsPageState extends State<DetailsPage> {
                       Get.back();
                     },
                   ),
-                  Text('Al - Fatihah',
+                  Text(widget.surat,
                       style: TextStyle(
                           color: Color(0xFF890BA9),
                           fontSize: 22,
@@ -66,7 +72,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     height: 25,
                   ),
                   Text(
-                    'Al - Fatihah',
+                    widget.surat,
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -76,7 +82,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     height: 10,
                   ),
                   Text(
-                    'The Opening',
+                    widget.arti,
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w300,
@@ -96,7 +102,7 @@ class _DetailsPageState extends State<DetailsPage> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Mekah',
+                        widget.tempatTurun,
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w300,
@@ -106,7 +112,7 @@ class _DetailsPageState extends State<DetailsPage> {
                         width: 20,
                       ),
                       Text(
-                        '7 Ayat',
+                        widget.ayat,
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w300,

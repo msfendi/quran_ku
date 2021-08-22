@@ -13,6 +13,10 @@ class DetailSurat extends StatelessWidget {
       onTap: () {
         Get.to(DetailsPage(
           nomor: quran.nomor,
+          surat: quran.nama,
+          arti: quran.arti,
+          tempatTurun: quran.type.toString(),
+          ayat: quran.ayat.toString(),
         ));
       },
       child: Column(
